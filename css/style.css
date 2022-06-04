@@ -1,0 +1,770 @@
+/*--====================================
+|   |   |   common css start|  |   |   |
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 0.8;
+    padding-bottom: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*--====================================
+|   |   |   common css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   navbar css start|  |   |   |
+========================================= */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -12px;
+    height: 3px;
+    width: 0;
+    background-color: #fce38a;
+    transition: all linear 0.3s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item {
+    padding: 0 28px;
+    transition: all linear 0.3s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link {
+    color: #fce38a;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link::after {
+    width: 100%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item:last-child {
+    padding-right: 0;
+}
+
+/* sticky menu css start */
+.sticky-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e224d;
+    animation: sticky 1s linear;
+    z-index: 999;
+    padding: 15px 0;
+}
+
+@keyframes sticky {
+    0% {
+        top: -50px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+/* sticky menu css end */
+/*--====================================
+|   |   |   navbar css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   banner css start|  |   |   |
+========================================= */
+#banner {
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 230px 0;
+}
+
+.banner-text h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    font-weight: 400;
+    color: #fff;
+    padding-bottom: 45px;
+}
+
+.banner-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 140px;
+    text-transform: uppercase;
+    padding-bottom: 126px;
+    position: relative;
+}
+
+.banner-text h1::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    height: 3px;
+    width: 60px;
+    background-color: #fff;
+}
+
+.banner-text button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+/*--====================================
+|   |   |   banner css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   about css start|  |   |   |
+========================================= */
+#about {
+    padding: 90px 0 90px;
+}
+
+.about-item {
+    margin: 0 12px;
+}
+
+.about-slide-item.slick-center {
+    transform: scale(1.1);
+    transition: all linear .3s;
+}
+
+#about .slick-list {
+    padding: 80px 0 !important;
+}
+
+.heading h3 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333333;
+    padding-bottom: 25px;
+}
+
+.heading h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.heading h2::after {
+    position: absolute;
+    content: '';
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 60px;
+    background-color: #f38181;
+}
+
+.heading p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 24px;
+    padding-bottom: 100px;
+}
+
+.about-item {
+    margin-bottom: 20px;
+}
+
+.about-item-overlay {
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.about-overlay-content i {
+    font-size: 26px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.about-overlay-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about-item:hover .about-item-overlay {
+    opacity: 1;
+}
+
+/*--====================================
+|   |   |   about css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   counter css start|  |   |   |
+========================================= */
+#counter {
+    padding: 90px 0;
+    background-color: #95e1d3;
+}
+
+.counter-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 25px;
+}
+
+.counter-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*--====================================
+|   |   |   counter css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   service css start|  |   |   |
+========================================= */
+#service {
+    padding-top: 110px;
+}
+
+.service-icon i {
+    font-size: 32px;
+    color: #95e1d3;
+    padding-bottom: 30px;
+}
+
+.service-text h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.service-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 24px;
+    padding-bottom: 100px;
+}
+
+/*--====================================
+|   |   |   service css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   comments css start|  |   |   |
+========================================= */
+#comment {
+    padding: 70px 0;
+    background-color: #f8f8f8;
+}
+
+.comment-left-icon i {
+    font-size: 22px;
+    color: #95e1d3;
+}
+
+.comment-right-icon i {
+    font-size: 22px;
+    color: #95e1d3;
+}
+
+.comment-content-icon i {
+    font-size: 72px;
+    color: #95e1d3;
+    height: 150px;
+    width: 150px;
+    border: 3px solid #95e1d3;
+    text-align: center;
+    line-height: 150px;
+}
+
+.comment-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #999999;
+    line-height: 36px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.inner-comment h5 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+    margin-left: 80px;
+    margin-top: 15px;
+    position: relative;
+
+}
+
+.inner-comment h5::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    left: -70px;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+}
+
+/*--====================================
+|   |   |   comments css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   team css start|  |   |   |
+========================================= */
+#team {
+    padding: 100px 0;
+}
+
+.team-item {
+    margin: 0 12px;
+}
+
+.team-slide-item.slick-center {
+    transform: scale(1.09);
+    transition: all linear .3s;
+}
+
+#team .slick-list {
+    padding: 80px 0 !important;
+}
+
+.team-pic {
+    position: relative;
+}
+
+.team-pic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.team-pic-overlay a i {
+    font-size: 27px;
+    height: 55px;
+    width: 55px;
+    color: #f38181;
+    background-color: #fce38a;
+    text-align: center;
+    line-height: 55px;
+    border-right: 1px solid #f9bd87;
+    transition: all linear 0.3s;
+}
+
+.team-content h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+
+.team-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #999999;
+    font-style: italic;
+}
+
+.team-pic:hover .team-pic-overlay {
+    opacity: 1;
+}
+
+.team-pic-overlay a i:hover {
+    background-color: #f38181;
+    color: #fff;
+    border-right: none;
+}
+
+/*--====================================
+|   |   |   team css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   gallery css start|  |   |   |
+========================================= */
+.gallery-item-pic {
+    position: relative;
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.gallery-overlay-content i {
+    font-size: 24px;
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.gallery-overlay-content h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.gallery-overlay-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    font-style: italic;
+}
+
+.gallery-item-pic:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+.gallery-item {
+    padding-bottom: 100px;
+}
+
+/*--====================================
+|   |   |   gallery css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   footer css start|  |   |   |
+========================================= */
+#footer {
+    background-color: #f8f8f8;
+    padding: 70px 0;
+}
+
+/* left line start */
+.f-left-content {
+    margin-top: 40px;
+}
+
+.f-left-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 24px;
+}
+
+.f-left-bottom {
+    margin-top: 50px;
+}
+
+.f-left-bottom p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    padding-bottom: 35px;
+    position: relative;
+}
+
+.f-left-bottom p::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+.f-left-bottom p span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.f-left-social {
+    padding-bottom: 40px;
+}
+
+.f-left-social span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #999;
+    font-style: italic;
+    padding-right: 20px;
+}
+
+.f-left-social a i {
+    font-size: 20px;
+    color: #95e1d3;
+    padding-right: 15px;
+}
+
+.email-field input {
+    width: 380px;
+    height: 40px;
+    outline: none;
+    border: 1px solid #e7e7e7;
+    padding-left: 15px;
+    color: #000;
+}
+
+.email-field input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    font-style: italic;
+}
+
+.f-left-button button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    background-color: #95e1d3;
+    border: none;
+    border-radius: 5px;
+}
+
+.f-left-button {
+    position: relative;
+}
+
+.f-left-button button {
+    position: absolute;
+    top: 0;
+    right: 72px;
+}
+
+/* middle line start */
+.f-heading h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
+.f-blog-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    text-transform: uppercase;
+    line-height: 18px;
+    margin-bottom: 0;
+}
+
+.f-blog-content span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #999;
+    font-style: italic;
+}
+
+.blog-item {
+    margin-bottom: 40px;
+}
+
+/* right line start */
+.f-gallery-item img {
+    border: 2px solid #f8f8f8;
+}
+
+.f-right-link p {
+    padding-top: 20px;
+}
+
+.f-right-link p a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #333;
+    font-style: italic;
+}
+
+/*--====================================
+|   |   |   footer css end|  |   |   |
+========================================= */
+
+
+/* =====================================
+    |   |   |back to top css start
+    ===================================== */
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 40px;
+    width: 40px;
+    background-color: #8a3174;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 99999;
+    display: none;
+    transition: all linear 0.3s;
+    animation: btp 1s linear;
+}
+
+.back-to-top i {
+    font-size: 20px;
+    color: #fff;
+
+}
+
+.back-to-top:hover {
+    background-color: rgb(80, 228, 92);
+    transform: scale(1.2);
+}
+
+@keyframes btp {
+    0% {
+        bottom: 85%;
+        right: 15px;
+    }
+
+    100% {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/*--====================================
+|   |   |   back to top css end|  |   |   |
+========================================= */
+
+
+/*--====================================
+|   |   |   copyright css start|  |   |   |
+========================================= */
+.copy-line {
+    padding: 25px 0;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.copy-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.copy-text p span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #f38181;
+}
+
+/*--====================================
+|   |   |   copyright css end|  |   |   |
+========================================= */
